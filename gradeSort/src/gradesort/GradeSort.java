@@ -61,16 +61,7 @@ public class GradeSort {
          }
          
          
-        /*  println("Here is the sorted list by values");
-        Map<String, Integer> sort = new TreeMap<String, Integer>(studentGrades);
-        
-        Int sort_ = sort.values();
-        Iterator j = sort_.iterator();
-         while (j.hasNext()) {
-             Map.Entry grade = (Map.Entry)i.next();
-             println(grade.getKey() + " " + grade.getValue());
-            
-         }*/
+       
          
          // is becky in the list
          assert (studentGrades.containsKey("becky")) == true;
