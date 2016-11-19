@@ -8,10 +8,11 @@
 
 #Assignment with J unit tests
 [Assignment with J unit tests ...All of my tests failed and I wasn't sure why.](https://github.com/crisbc/java-class/tree/JunitTests/gradeSortJunit/test)
-[Also part of assignment with J unit tests](https://github.com/crisbc/java-class/tree/JunitTests/gradeSortJunit/test)
+
+[This is also part of assignment with J unit tests](https://github.com/crisbc/java-class/tree/JunitTests/gradeSortJunit/src/gradesortjunit)
 
 #Assignment with Threading/Concurrent
-[Assignment with Threading/Concurrent - Program computes the bonus amount for the payperiod of a small shop](https://github.com/crisbc/java-class/tree/master/FlowerShop/src/flowershop)
+[Assignment with Threading/Concurrent - Program computes the bonus amount for the pay period of a small shop](https://github.com/crisbc/java-class/tree/master/FlowerShop/src/flowershop)
 
 
 
