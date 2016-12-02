@@ -1,5 +1,9 @@
 # java-class
 
+#Assignment from github (palindrome with tests
+[Palindrome with tests all tests passed](https://github.com/crisbc/java-class/tree/master/palindromeAddedTests)
+
+
 #Assignment for collections
 [Assignment for collections](https://github.com/crisbc/java-class/tree/master/gradeSort)
 
