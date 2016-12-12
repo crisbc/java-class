@@ -314,63 +314,54 @@ public class Calculator extends javax.swing.JFrame {
      
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-         String Entered = jDisplay.getText() + jButton2.getText();
-        jDisplay.setText(Entered);
+          jDisplay.setText( jDisplay.getText() + jButton2.getText());
+        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String Entered = jDisplay.getText() + jButton1.getText();
-        jDisplay.setText(Entered);
+         jDisplay.setText( jDisplay.getText() + jButton1.getText());
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-         String Entered = jDisplay.getText() + jButton3.getText();
-        jDisplay.setText(Entered);
+          jDisplay.setText( jDisplay.getText() + jButton3.getText());
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-         String Entered = jDisplay.getText() + jButton4.getText();
-        jDisplay.setText(Entered);
+       
+         jDisplay.setText( jDisplay.getText() + jButton4.getText());
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
-         String Entered = jDisplay.getText() + jButton5.getText();
-        jDisplay.setText(Entered);
+       
+         jDisplay.setText( jDisplay.getText() + jButton5.getText());
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
-         String Entered = jDisplay.getText() + jButton6.getText();
-        jDisplay.setText(Entered);
+       
+         jDisplay.setText( jDisplay.getText() + jButton6.getText());
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
-         String Entered = jDisplay.getText() + jButton7.getText();
-        jDisplay.setText(Entered);
+        
+         jDisplay.setText( jDisplay.getText() + jButton7.getText());
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
-         String Entered = jDisplay.getText() + jButton8.getText();
-        jDisplay.setText(Entered);
+       
+         jDisplay.setText( jDisplay.getText() + jButton8.getText());
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        // TODO add your handling code here:
-         String Entered = jDisplay.getText() + jButton9.getText();
-        jDisplay.setText(Entered);
+       
+         jDisplay.setText( jDisplay.getText() + jButton9.getText());
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButtonZeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonZeroActionPerformed
         // TODO add your handling code here:
-         String Entered = jDisplay.getText() + jButtonZero.getText();
-        jDisplay.setText(Entered);
+         jDisplay.setText( jDisplay.getText() + jButtonZero.getText());
     }//GEN-LAST:event_jButtonZeroActionPerformed
 
     private void jButtonClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClearActionPerformed
@@ -379,7 +370,7 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonClearActionPerformed
 
     private void jButtonPlusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPlusActionPerformed
-        // TODO add your handling code here:
+      
         firstnum = Double.parseDouble(jDisplay.getText());
         jDisplay.setText("");
         operations="+";
@@ -420,35 +411,30 @@ public class Calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton16ActionPerformed
 
     private void jButtonEqualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEqualActionPerformed
-        // TODO add your handling code here:
-        String answer;
+        
+       // String answer;
         
         secondnum = Double.parseDouble(jDisplay.getText());
         
         if (operations == "+"){
             equals = firstnum + secondnum;
-            answer = String.format("%.Of", equals);
-            jDisplay.setText(answer);
+            jDisplay.setText(Double.toString(equals));
         }
         else if (operations == "-"){
             equals = firstnum - secondnum;
-            answer = String.format("%.Of", equals);
-            jDisplay.setText(answer);
+            jDisplay.setText(Double.toString(equals));
         }
         else if (operations == "*"){
             equals = firstnum * secondnum;
-            answer = String.format("%.Of", equals);
-            jDisplay.setText(answer);
+          jDisplay.setText(Double.toString(equals));
         }
         else if (operations == "/"){
             equals = firstnum / secondnum;
-            answer = String.format("%.Of", equals);
-            jDisplay.setText(answer);
+            jDisplay.setText(Double.toString(equals));
         }
         else if (operations == "%"){
             equals = firstnum  % secondnum;
-            answer = String.format("%.Of", equals);
-            jDisplay.setText(answer);
+            jDisplay.setText(Double.toString(equals));
         }
     }//GEN-LAST:event_jButtonEqualActionPerformed
 

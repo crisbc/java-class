@@ -72,6 +72,11 @@ public class Employees extends javax.swing.JFrame {
         jLabel6.setText("Employee Number:");
 
         jBtnDelete.setText("Delete");
+        jBtnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnDeleteActionPerformed(evt);
+            }
+        });
 
         BtnEdit.setText("Edit");
         BtnEdit.addActionListener(new java.awt.event.ActionListener() {
@@ -225,7 +230,7 @@ public class Employees extends javax.swing.JFrame {
         
          try{
              connection = Connecting.getConnection();
-             preparedStatement = connection.prepareStatement("SELECT key, name, phone, bday FROM test WHERE id=?");
+             preparedStatement = connection.prepareStatement("SELECT `key`, name, phone, bday FROM test WHERE id=?");
              preparedStatement.setString(1, idText.getText());
              resultSet = preparedStatement.executeQuery();
             
@@ -251,7 +256,29 @@ public class Employees extends javax.swing.JFrame {
     }//GEN-LAST:event_btnSearchActionPerformed
 
     private void BtnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditActionPerformed
-        // TODO add your handling code here:
+       
+        try{
+             connection = Connecting.getConnection();
+        preparedStatement = connection.prepareStatement("UPDATE test SET name=?, phone=?, bday=? WHERE id=?");
+        //preparedStatement.setString(1, idText.getText());
+        preparedStatement.setString(1, nameText.getText());
+        preparedStatement.setString(2, phoneText.getText());
+        preparedStatement.setDate(3,Date.valueOf(birthdayText.getText()));
+       preparedStatement.setInt(4,Integer.parseInt(idText.getText()));
+        int res = preparedStatement.executeUpdate();
+        if(res > 0){
+            JOptionPane.showMessageDialog(null, "Employee Information has been updated");
+            clearText();
+        } else{
+            JOptionPane.showMessageDialog(null,"Error could not update information");
+        } 
+        
+        connection.close();
+        
+        } catch (Exception ex){
+            System.out.println(ex);
+            System.out.println("got here");
+        }
         
     }//GEN-LAST:event_BtnEditActionPerformed
 
@@ -259,6 +286,29 @@ public class Employees extends javax.swing.JFrame {
         // TODO add your handling code here:
        clearText();
     }//GEN-LAST:event_btnClearTextActionPerformed
+
+    private void jBtnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnDeleteActionPerformed
+        
+        try{
+             connection = Connecting.getConnection();
+        preparedStatement = connection.prepareStatement("DELETE FROM test WHERE id=?");
+       preparedStatement.setInt(1,Integer.parseInt(idText.getText()));
+        int res = preparedStatement.executeUpdate();
+        
+        if(res > 0){
+            JOptionPane.showMessageDialog(null, "Employee Information deleted");
+            clearText();
+        } else{
+            JOptionPane.showMessageDialog(null,"Error could not delete information");
+        } 
+        
+        connection.close();
+        
+        } catch (Exception ex){
+            System.out.println(ex);
+            System.out.println("got here");
+        }
+    }//GEN-LAST:event_jBtnDeleteActionPerformed
   
     public void clearText(){
          idText.setText(null);
