@@ -38,7 +38,7 @@
 
 #2nd Final of employee management system with objects and connects to database to input employee information
 (https://github.com/crisbc/java-class/tree/master/Final)
-#login page fort employee management system
+#login page for employee management system
 (https://github.com/crisbc/java-class/blob/master/Final/src/LoginFrame.java)
 
 #employee page for employee management sytem
