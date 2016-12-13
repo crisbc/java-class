@@ -32,3 +32,6 @@
 (https://github.com/crisbc/java-class/blob/master/Screenshot%20(3).png)
 #3
 (https://github.com/crisbc/java-class/blob/master/Screenshot%20(2).png)
+
+#2nd Final of employee management system with objects and connects to database to input employee information
+(https://github.com/crisbc/java-class/tree/master/Final)
